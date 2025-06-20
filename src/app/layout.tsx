@@ -1,8 +1,8 @@
+import Providers from "@/components/themeprovider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Particle } from "@/components/assets/particals";
-import Cursor from "@/components/assets/cursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,14 +24,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Cursor/>
-        <Particle/>
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Providers>
+          <Particle/>
+          {children}
+        </Providers>
       </body>
     </html>
   );

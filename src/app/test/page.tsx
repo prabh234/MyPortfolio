@@ -1,12 +1,13 @@
-import SplitText from "@/blocks/TextAnimations/SplitText/SplitText";
-import AppReveal from "@/components/assets/intro";
+import SplitText from '@/blocks/TextAnimations/SplitText/SplitText';
+import AppReveal from '@/components/assets/intro';
+import { ThemeSwitcher } from '@/components/toggler';
 
-export default function Home() {
-
+function Testing() {
   return (
     <AppReveal>
      <main className="flex flex-col items-center justify-center ">
      <div className="h-screen flex items-center justify-center ">
+        <ThemeSwitcher/>
 <SplitText
   text="Prabhjot Singh"
   className="text-9xl p-5 font-semibold text-center"
@@ -26,7 +27,7 @@ export default function Home() {
     </div>
   </main>
 </AppReveal>
-  );
+  )
 }
 
-
+export default Testing
